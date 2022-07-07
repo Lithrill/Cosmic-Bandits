@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0e340dc03394da543837b9135471781d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - uranium: {fileID: 8999450203204836498, guid: ca556520b92a40f4a8181acc1d4a7ebf, type: 3}
+  - uIuraniumcounter: {instanceID: 0}
+  - uraniumCounter: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b53958eb87cf8204e9bced32b36f3d59
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fpsCam: {instanceID: 0}
+  - attackPoint: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - bulletHoleGraphic: {instanceID: 0}
+  - text: {instanceID: 0}
+  - soldier: {fileID: 1054670170977340447, guid: 12631a34d2ccc014c96da4b312117e03, type: 3}
+  - uranium: {fileID: 8999450203204836498, guid: ca556520b92a40f4a8181acc1d4a7ebf, type: 3}
+  - spawnPosition: {fileID: 1054670170977046655, guid: 12631a34d2ccc014c96da4b312117e03, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
