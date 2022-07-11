@@ -370,6 +370,7 @@
 "Assets/EZ-Camera-Shake-Unity-master/EZ-Camera-Shake-Unity-master/Assets/EZ Camera Shake/Scripts/CameraShakePresets.cs"
 "Assets/EZ-Camera-Shake-Unity-master/EZ-Camera-Shake-Unity-master/Assets/EZ Camera Shake/Scripts/CameraShaker.cs"
 "Assets/EZ-Camera-Shake-Unity-master/EZ-Camera-Shake-Unity-master/Assets/EZ Camera Shake/Scripts/Utilities/CameraUtilities.cs"
+"Assets/NPCMove.cs"
 "Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs"
 "Assets/SampleScenes/Menu/Scripts/PauseMenu.cs"
 "Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs"
