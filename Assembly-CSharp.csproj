@@ -62,6 +62,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+    <Compile Include="Assets\Domara&apos;s folder\Scripts\ItemCollector.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -74,10 +75,12 @@
     <Compile Include="Assets\EffectExamples\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\NPCMove.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\DoorOverideCode.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\EZ-Camera-Shake-Unity-master\EZ-Camera-Shake-Unity-master\Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Assets\Conrad&apos;s folder\LookAtTargetScript.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\DoorOverideEvent.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -133,9 +137,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\UraniumCounterTrigger.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Domara&apos;s folder\ItemCollector.cs" />
-    <Compile Include="Assets\Conrad&apos;s folder\DoorOverideCode.cs" />
-    <Compile Include="Assets\Conrad&apos;s folder\DoorOverideEvent.cs" />
+    <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardPickup.cs" />
+    <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardToDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

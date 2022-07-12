@@ -20,6 +20,8 @@ public class EventManager : MonoBehaviour
 
     public delegate void DoorOveride();
 
+    public delegate void LevelOneKeyCard();
+
     //
 
     public static UraniumPickUp OnUraniumPickUpEvent;
@@ -37,4 +39,6 @@ public class EventManager : MonoBehaviour
     public static isNotClose OnIsNotCloseEvent;
 
     public static DoorOveride OnDoorOverideEvent;
+
+    public static LevelOneKeyCard OnLevelOneKeyCardEvent;
 }
