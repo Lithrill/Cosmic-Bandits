@@ -62,7 +62,7 @@ public class UraniumPickUp : MonoBehaviour
         if (uraniumNumberCounter >= 3)
         {
             uraniumNumberCounter -= 3;
-            uraniumCounter.text = "Uranium" + ":" + uraniumNumberCounter.ToString("00");
+            uraniumCounter.text = "Uranium" + ": " + uraniumNumberCounter.ToString("00");
 
             EventManager.OnAutomaticGunEvent?.Invoke();
             uraniumShower = StartCoroutine(ShowingUranium());

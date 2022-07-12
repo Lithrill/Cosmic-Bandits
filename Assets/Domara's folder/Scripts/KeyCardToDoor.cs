@@ -6,6 +6,7 @@ public class KeyCardToDoor : MonoBehaviour
 {
     public bool keyCardPickedUp = false;
     public bool isInSquare = false;
+    public bool doorActive = false;
     public GameObject door;
 
     public void Update()
@@ -13,15 +14,24 @@ public class KeyCardToDoor : MonoBehaviour
         if (keyCardPickedUp && isInSquare)
         {
             door.SetActive(false);
+            doorActive = true;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         isInSquare = true;
+        if (doorActive)
+        {
+            door.SetActive(false);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
         isInSquare = false;
+        if (doorActive)
+        {
+            door.SetActive(true);
+        }
     }
     public void keyCardIsPickedUp()
     {

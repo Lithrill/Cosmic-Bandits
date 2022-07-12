@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Conrad&apos;s folder\UraniumPickUp.cs" />
+    <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardToDoor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
@@ -126,6 +127,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\EZ-Camera-Shake-Unity-master\EZ-Camera-Shake-Unity-master\Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnTrigger.cs" />
+    <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardPickup.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\GunSystem.cs" />
     <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -137,8 +139,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\UraniumCounterTrigger.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardPickup.cs" />
-    <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardToDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

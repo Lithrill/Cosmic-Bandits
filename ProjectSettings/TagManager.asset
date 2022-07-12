@@ -15,14 +15,16 @@ TagManager:
   - Enemy 7
   - Enemy 8
   - DoorOveride
+  - Fire
+  - Enemy 9
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - WhatIsGround
   - Water
   - UI
-  - 
+  - WhatIsPlayer
   - 
   - 
   - 

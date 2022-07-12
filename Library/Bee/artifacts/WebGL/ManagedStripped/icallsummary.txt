@@ -541,6 +541,7 @@ UnityEngine.ParticleSystem/MainModule::set_startSpeed_Injected
 UnityEngine.ParticleSystemExtensionsImpl::GetCollisionEvents
 UnityEngine.ParticleSystemRenderer::GetMeshes
 UnityEngine.PhysicMaterial::Internal_CreateDynamicsMaterial
+UnityEngine.Physics::CheckSphere_Internal_Injected
 UnityEngine.Physics::get_defaultPhysicsScene_Injected
 UnityEngine.Physics::get_gravity_Injected
 UnityEngine.Physics::OverlapSphere_Internal_Injected

@@ -2450,6 +2450,10 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Physics
 
+		//System.Boolean UnityEngine.Physics::CheckSphere_Internal_Injected(UnityEngine.PhysicsScene&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+		void Register_UnityEngine_Physics_CheckSphere_Internal_Injected();
+		Register_UnityEngine_Physics_CheckSphere_Internal_Injected();
+
 		//System.Void UnityEngine.Physics::get_defaultPhysicsScene_Injected(UnityEngine.PhysicsScene&)
 		void Register_UnityEngine_Physics_get_defaultPhysicsScene_Injected();
 		Register_UnityEngine_Physics_get_defaultPhysicsScene_Injected();

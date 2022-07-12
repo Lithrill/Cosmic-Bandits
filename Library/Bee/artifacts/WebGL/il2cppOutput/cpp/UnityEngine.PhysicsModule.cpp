@@ -825,6 +825,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* Physics_OverlapSphere_Internal_m912FEDCC2B383350CF9C4A8A4524EA38C3D965BB (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___physicsScene0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, float ___radius2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method) ;
 // UnityEngine.Collider[] UnityEngine.Physics::OverlapSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* Physics_OverlapSphere_m34F2163D22864647F900F86E1B68677D5CE35DA5 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___radius1, int32_t ___layerMask2, int32_t ___queryTriggerInteraction3, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Physics::CheckSphere_Internal_Injected(UnityEngine.PhysicsScene&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_Internal_Injected_m909454489EC8F54C15D73EFCFA2FAA7F962ED02B (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE* ___physicsScene0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___position1, float ___radius2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Physics::CheckSphere_Internal(UnityEngine.PhysicsScene,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_Internal_m0FA3CC57852BDCE85948D66D8D8F4E5B2B318498 (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___physicsScene0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, float ___radius2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Physics::CheckSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_m8642264AC443B505CE92D5DC9E41F75DA0ADAFBF (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___radius1, int32_t ___layerMask2, int32_t ___queryTriggerInteraction3, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m2149FA40CEC8D82AC20D3508AB40C0D8EFEF68E6 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.PhysicMaterial::Internal_CreateDynamicsMaterial(UnityEngine.PhysicMaterial,System.String)
@@ -2351,6 +2357,61 @@ IL_000d:
 		return L_3;
 	}
 }
+// System.Boolean UnityEngine.Physics::CheckSphere_Internal(UnityEngine.PhysicsScene,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_Internal_m0FA3CC57852BDCE85948D66D8D8F4E5B2B318498 (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE ___physicsScene0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, float ___radius2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___radius2;
+		int32_t L_1 = ___layerMask3;
+		int32_t L_2 = ___queryTriggerInteraction4;
+		bool L_3;
+		L_3 = Physics_CheckSphere_Internal_Injected_m909454489EC8F54C15D73EFCFA2FAA7F962ED02B((&___physicsScene0), (&___position1), L_0, L_1, L_2, NULL);
+		return L_3;
+	}
+}
+// System.Boolean UnityEngine.Physics::CheckSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_m8642264AC443B505CE92D5DC9E41F75DA0ADAFBF (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___radius1, int32_t ___layerMask2, int32_t ___queryTriggerInteraction3, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE L_0;
+		L_0 = Physics_get_defaultPhysicsScene_mE31D961DE894CE62A39A3504DE85F60E9E531687(NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___position0;
+		float L_2 = ___radius1;
+		int32_t L_3 = ___layerMask2;
+		int32_t L_4 = ___queryTriggerInteraction3;
+		bool L_5;
+		L_5 = Physics_CheckSphere_Internal_m0FA3CC57852BDCE85948D66D8D8F4E5B2B318498(L_0, L_1, L_2, L_3, L_4, NULL);
+		V_0 = L_5;
+		goto IL_0012;
+	}
+
+IL_0012:
+	{
+		bool L_6 = V_0;
+		return L_6;
+	}
+}
+// System.Boolean UnityEngine.Physics::CheckSphere(UnityEngine.Vector3,System.Single,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_m5E5FF963A4B356DFFCAF69B9AF9209DD1632EF17 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position0, float ___radius1, int32_t ___layerMask2, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___position0;
+		float L_1 = ___radius1;
+		int32_t L_2 = ___layerMask2;
+		bool L_3;
+		L_3 = Physics_CheckSphere_m8642264AC443B505CE92D5DC9E41F75DA0ADAFBF(L_0, L_1, L_2, 0, NULL);
+		V_0 = L_3;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		bool L_4 = V_0;
+		return L_4;
+	}
+}
 // System.Void UnityEngine.Physics::get_gravity_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Physics_get_gravity_Injected_mBE69E7EE2011DEDE7640AFBF79B93173B5987DD5 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___ret0, const RuntimeMethod* method) 
 {
@@ -2397,6 +2458,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Physics_OverlapSphere_Internal_Injected_mFB1C07A0F1C8E5144F11393E382B9B5E47D17672_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::OverlapSphere_Internal_Injected(UnityEngine.PhysicsScene&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
 	ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* icallRetVal = _il2cpp_icall_func(___physicsScene0, ___position1, ___radius2, ___layerMask3, ___queryTriggerInteraction4);
+	return icallRetVal;
+}
+// System.Boolean UnityEngine.Physics::CheckSphere_Internal_Injected(UnityEngine.PhysicsScene&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Physics_CheckSphere_Internal_Injected_m909454489EC8F54C15D73EFCFA2FAA7F962ED02B (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE* ___physicsScene0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___position1, float ___radius2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method) 
+{
+	typedef bool (*Physics_CheckSphere_Internal_Injected_m909454489EC8F54C15D73EFCFA2FAA7F962ED02B_ftn) (PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*, float, int32_t, int32_t);
+	static Physics_CheckSphere_Internal_Injected_m909454489EC8F54C15D73EFCFA2FAA7F962ED02B_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Physics_CheckSphere_Internal_Injected_m909454489EC8F54C15D73EFCFA2FAA7F962ED02B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Physics::CheckSphere_Internal_Injected(UnityEngine.PhysicsScene&,UnityEngine.Vector3&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)");
+	bool icallRetVal = _il2cpp_icall_func(___physicsScene0, ___position1, ___radius2, ___layerMask3, ___queryTriggerInteraction4);
 	return icallRetVal;
 }
 #ifdef __clang__

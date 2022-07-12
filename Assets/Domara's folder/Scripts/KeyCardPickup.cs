@@ -6,6 +6,8 @@ public class KeyCardPickup : MonoBehaviour
 {
     public GameObject keyCard;
     public GameObject pickUpText;
+    public GameObject particleEffects;
+    
     public bool isInSquare = false;
 
     private void Update()
@@ -13,7 +15,9 @@ public class KeyCardPickup : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && isInSquare)
         {
             keyCard.SetActive(false);
-            //pickUpText.SetActive(false);
+            pickUpText.SetActive(false);
+            particleEffects.SetActive(false);
+            
             EventManager.OnLevelOneKeyCardEvent?.Invoke();
             Destroy(this);
         }
@@ -21,11 +25,15 @@ public class KeyCardPickup : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isInSquare = true;
-        //pickUpText.SetActive(true);
+        pickUpText.SetActive(true);
+        particleEffects.SetActive(true);
+        
     }
     private void OnTriggerExit(Collider other)
     {
         isInSquare = false;
-        //pickUpText.SetActive(false);
+        pickUpText.SetActive(false);
+        particleEffects.SetActive(false);
+        
     }
 }
