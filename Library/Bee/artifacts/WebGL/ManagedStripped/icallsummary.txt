@@ -21,10 +21,6 @@ UnityEngine.AnimationCurve::Internal_Create
 UnityEngine.AnimationCurve::Evaluate
 UnityEngine.AnimationCurve::GetKey_Injected
 UnityEngine.AnimationCurve::Internal_Destroy
-UnityEngine.AnimationCurve::SetKeys
-UnityEngine.AnimationCurve::set_postWrapMode
-UnityEngine.AnimationCurve::set_preWrapMode
-UnityEngine.AnimationCurve::GetKeys
 UnityEngine.Animations.AnimationLayerMixerPlayable::SetSingleLayerOptimizationInternal
 UnityEngine.Animator::GetBoolString
 UnityEngine.Animator::get_hasBoundPlayables
@@ -43,7 +39,6 @@ UnityEngine.Application::get_isBatchMode
 UnityEngine.Application::get_isFocused
 UnityEngine.Application::get_isPlaying
 UnityEngine.Application::OpenURL
-UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
 UnityEngine.AsyncOperation::InternalDestroy
 UnityEngine.AudioClip::get_length
@@ -84,9 +79,7 @@ UnityEngine.Camera::CalculateObliqueMatrix_Injected
 UnityEngine.Camera::Render
 UnityEngine.Camera::ScreenPointToRay_Injected
 UnityEngine.Camera::ScreenToViewportPoint_Injected
-UnityEngine.Camera::ScreenToWorldPoint_Injected
 UnityEngine.Camera::ViewportPointToRay_Injected
-UnityEngine.Camera::ViewportToWorldPoint_Injected
 UnityEngine.Camera::WorldToScreenPoint_Injected
 UnityEngine.Camera::get_backgroundColor_Injected
 UnityEngine.Camera::get_pixelRect_Injected
@@ -131,7 +124,6 @@ UnityEngine.Canvas::set_referencePixelsPerUnit
 UnityEngine.Canvas::set_scaleFactor
 UnityEngine.Canvas::set_sortingLayerID
 UnityEngine.Canvas::set_sortingOrder
-UnityEngine.Canvas::set_worldCamera
 UnityEngine.Canvas::get_additionalShaderChannels
 UnityEngine.Canvas::get_worldCamera
 UnityEngine.Canvas::get_rootCanvas
@@ -180,7 +172,6 @@ UnityEngine.CharacterController::get_velocity_Injected
 UnityEngine.CharacterController::Move_Injected
 UnityEngine.Collider::get_isTrigger
 UnityEngine.Collider::Raycast_Injected
-UnityEngine.Collider::get_sharedMaterial
 UnityEngine.Collider::get_attachedRigidbody
 UnityEngine.Component::BroadcastMessage
 UnityEngine.Component::GetComponentsForListInternal
@@ -229,7 +220,6 @@ UnityEngine.Event::set_modifiers
 UnityEngine.Event::set_mousePosition_Injected
 UnityEngine.Event::set_type
 UnityEngine.Event::get_modifiers
-UnityEngine.Event::GetTypeForControl
 UnityEngine.Event::get_rawType
 UnityEngine.Event::get_type
 UnityEngine.Event::get_keyCode
@@ -294,13 +284,8 @@ UnityEngine.Gradient::Cleanup
 UnityEngine.Graphics::Internal_GetMaxDrawMeshInstanceCount
 UnityEngine.Graphics::Internal_SetNullRT
 UnityEngine.Graphics::Internal_SetRTSimple_Injected
-UnityEngine.GUI::HasMouseControl
 UnityEngine.GUI::get_changed
 UnityEngine.GUI::get_enabled
-UnityEngine.GUI::get_usePageScrollbars
-UnityEngine.GUI::GrabMouseControl
-UnityEngine.GUI::InternalRepaintEditorWindow
-UnityEngine.GUI::ReleaseMouseControl
 UnityEngine.GUI::get_backgroundColor_Injected
 UnityEngine.GUI::get_color_Injected
 UnityEngine.GUI::get_contentColor_Injected
@@ -314,7 +299,6 @@ UnityEngine.GUIClip::GetMatrix_Injected
 UnityEngine.GUIClip::Internal_Pop
 UnityEngine.GUIClip::Internal_PopParentClip
 UnityEngine.GUIClip::Internal_PushParentClip_Injected
-UnityEngine.GUIClip::Internal_Push_Injected
 UnityEngine.GUIClip::SetMatrix_Injected
 UnityEngine.GUIClip::get_visibleRect_Injected
 UnityEngine.GUILayoutUtility::Internal_GetWindowRect_Injected
@@ -322,7 +306,6 @@ UnityEngine.GUILayoutUtility::Internal_MoveWindow_Injected
 UnityEngine.GUIStyle::IsTooltipActive
 UnityEngine.GUIStyle::get_stretchHeight
 UnityEngine.GUIStyle::get_stretchWidth
-UnityEngine.GUIStyle::get_wordWrap
 UnityEngine.GUIStyle::Internal_GetCursorStringIndex_Injected
 UnityEngine.GUIStyle::GetRectOffsetPtr
 UnityEngine.GUIStyle::GetStyleStatePtr
@@ -334,8 +317,6 @@ UnityEngine.GUIStyle::get_fixedHeight
 UnityEngine.GUIStyle::get_fixedWidth
 UnityEngine.GUIStyle::Internal_GetSelectedRenderedText_Injected
 UnityEngine.GUIStyle::get_rawName
-UnityEngine.GUIStyle::Internal_CalcMinMaxWidth_Injected
-UnityEngine.GUIStyle::Internal_CalcSizeWithConstraints_Injected
 UnityEngine.GUIStyle::Internal_CalcSize_Injected
 UnityEngine.GUIStyle::Internal_Destroy
 UnityEngine.GUIStyle::Internal_Draw2_Injected
@@ -353,7 +334,6 @@ UnityEngine.GUIStyle::set_richText
 UnityEngine.GUIStyle::set_stretchHeight
 UnityEngine.GUIStyle::set_wordWrap
 UnityEngine.GUIStyle::get_font
-UnityEngine.GUIStyle::get_imagePosition
 UnityEngine.GUIStyleState::Init
 UnityEngine.GUIStyleState::Cleanup
 UnityEngine.GUIStyleState::set_textColor_Injected
@@ -380,7 +360,6 @@ UnityEngine.GUIUtility::SetKeyboardControlToFirstControlId
 UnityEngine.GUIUtility::SetKeyboardControlToLastControlId
 UnityEngine.GUIUtility::set_compositionCursorPos_Injected
 UnityEngine.GUIUtility::set_imeCompositionMode
-UnityEngine.GUIUtility::set_mouseUsed
 UnityEngine.GUIUtility::set_systemCopyBuffer
 UnityEngine.Input::CheckDisabled
 UnityEngine.Input::GetButton
@@ -405,7 +384,6 @@ UnityEngine.Input::get_mousePosition_Injected
 UnityEngine.Input::get_mouseScrollDelta_Injected
 UnityEngine.Input::set_compositionCursorPos_Injected
 UnityEngine.Input::set_imeCompositionMode
-UnityEngine.Input::set_simulateMouseWithTouches
 UnityEngine.Input::get_imeCompositionMode
 UnityEngine.Joint::set_anchor_Injected
 UnityEngine.Joint::set_connectedBody
@@ -448,7 +426,6 @@ UnityEngine.Material::SetMatrixImpl_Injected
 UnityEngine.Material::SetShaderKeywords
 UnityEngine.Material::SetTextureImpl
 UnityEngine.Material::set_renderQueue
-UnityEngine.Material::set_shader
 UnityEngine.Material::get_shader
 UnityEngine.Material::GetTextureImpl
 UnityEngine.MaterialPropertyBlock::CreateImpl
@@ -522,7 +499,6 @@ UnityEngine.ParticleSystem::Emit_Injected
 UnityEngine.ParticleSystem::Emit_Internal
 UnityEngine.ParticleSystem::Play
 UnityEngine.ParticleSystem::Stop
-UnityEngine.ParticleSystem::set_time
 UnityEngine.ParticleSystem/EmissionModule::set_enabled_Injected
 UnityEngine.ParticleSystem/MainModule::get_startLifetimeMultiplier_Injected
 UnityEngine.ParticleSystem/MainModule::get_startSizeMultiplier_Injected
@@ -540,7 +516,6 @@ UnityEngine.ParticleSystem/MainModule::set_startSpeedMultiplier_Injected
 UnityEngine.ParticleSystem/MainModule::set_startSpeed_Injected
 UnityEngine.ParticleSystemExtensionsImpl::GetCollisionEvents
 UnityEngine.ParticleSystemRenderer::GetMeshes
-UnityEngine.PhysicMaterial::Internal_CreateDynamicsMaterial
 UnityEngine.Physics::CheckSphere_Internal_Injected
 UnityEngine.Physics::get_defaultPhysicsScene_Injected
 UnityEngine.Physics::get_gravity_Injected
@@ -571,7 +546,6 @@ UnityEngine.PlayerConnectionInternal::SendMessage
 UnityEngine.PlayerConnectionInternal::UnregisterInternal
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_pixelLightCount
-UnityEngine.QualitySettings::get_vSyncCount
 UnityEngine.QualitySettings::set_pixelLightCount
 UnityEngine.QualitySettings::set_shadowDistance
 UnityEngine.QualitySettings::get_activeColorSpace
@@ -629,6 +603,7 @@ UnityEngine.Renderer::GetMaterial
 UnityEngine.Renderer::GetSharedMaterial
 UnityEngine.Rendering.GraphicsSettings::get_lightsUseLinearIntensity
 UnityEngine.Rendering.ScriptableRenderContext::GetCameras_Internal_Injected
+UnityEngine.RenderSettings::get_skybox
 UnityEngine.RenderTexture::get_height
 UnityEngine.RenderTexture::get_width
 UnityEngine.RenderTexture::GetColorBuffer_Injected
@@ -666,7 +641,6 @@ UnityEngine.Rigidbody::set_angularVelocity_Injected
 UnityEngine.Rigidbody::set_centerOfMass_Injected
 UnityEngine.Rigidbody::set_constraints
 UnityEngine.Rigidbody::set_drag
-UnityEngine.Rigidbody::set_freezeRotation
 UnityEngine.Rigidbody::set_isKinematic
 UnityEngine.Rigidbody::set_maxAngularVelocity
 UnityEngine.Rigidbody::set_rotation_Injected
@@ -753,13 +727,6 @@ UnityEngine.TextGenerator::GetLinesInternal
 UnityEngine.TextGenerator::GetVerticesInternal
 UnityEngine.TextGenerator::Internal_Destroy
 UnityEngine.TextGenerator::get_rectExtents_Injected
-UnityEngine.TextMesh::get_color_Injected
-UnityEngine.TextMesh::set_anchor
-UnityEngine.TextMesh::set_color_Injected
-UnityEngine.TextMesh::set_font
-UnityEngine.TextMesh::set_fontSize
-UnityEngine.TextMesh::set_text
-UnityEngine.TextMesh::get_font
 UnityEngine.Texture::get_isReadable
 UnityEngine.Texture::GetDataHeight
 UnityEngine.Texture::GetDataWidth
