@@ -17,6 +17,7 @@ TagManager:
   - DoorOveride
   - Fire
   - Enemy 9
+  - PLAY
   layers:
   - Default
   - TransparentFX

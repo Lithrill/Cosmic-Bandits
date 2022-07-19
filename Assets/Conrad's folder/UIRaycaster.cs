@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class UIRaycaster : MonoBehaviour
 {
@@ -34,8 +35,13 @@ public class UIRaycaster : MonoBehaviour
             }
             if (hit.transform.tag == "DoorOveride")
             {
-                Debug.Log("DoorOveride");
+                //Debug.Log("DoorOveride");
                 EventManager.OnDoorOverideEvent?.Invoke();
+            }
+            if (hit.transform.tag == "PLAY")
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                EventManager.OnIncreaseLevelEvent?.Invoke();
             }
         }
         else

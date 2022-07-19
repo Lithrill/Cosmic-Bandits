@@ -68,6 +68,7 @@ public class GunSystem : MonoBehaviour
     {
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
+        FindObjectOfType<AudioManager>().Play("GunReload");
     }
 
     private void ReloadFinished()
@@ -94,6 +95,7 @@ public class GunSystem : MonoBehaviour
 
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
+        FindObjectOfType<AudioManager>().Play("GunShot");
 
         readyToShoot = false;
 

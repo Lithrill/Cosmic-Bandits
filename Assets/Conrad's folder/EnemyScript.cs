@@ -29,6 +29,7 @@ public class EnemyScript : MonoBehaviour
         if (enemyTag == enemySpecifier)
         {
             Instantiate(uranium, spawnPosition.transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("DamageSound");
             soldier.SetActive(false);
         }
     }
