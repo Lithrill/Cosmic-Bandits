@@ -18,6 +18,7 @@ TagManager:
   - Fire
   - Enemy 9
   - PLAY
+  - NextLevel
   layers:
   - Default
   - TransparentFX

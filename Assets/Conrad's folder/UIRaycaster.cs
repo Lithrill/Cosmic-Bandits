@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class UIRaycaster : MonoBehaviour
 {
+    public GameObject level1, level2, player, gun;
+    public Transform level2SpawnPosition;
 
     public Camera cam;
 
@@ -37,6 +39,10 @@ public class UIRaycaster : MonoBehaviour
             {
                 //Debug.Log("DoorOveride");
                 EventManager.OnDoorOverideEvent?.Invoke();
+            }
+            if (hit.transform.tag == "NextLevel")
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
         }

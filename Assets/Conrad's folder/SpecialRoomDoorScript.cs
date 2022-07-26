@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpecialRoomDoorScript : MonoBehaviour
 {
     public bool isGreenActive, isBlueActive, isRedActive, isStartActive = true;
-    public GameObject greenDoor1, greenDoor2, blueDoor1, blueDoor2, redDoor1, redDoor2, Player, endDoor1, endDoor2;
+    public GameObject greenDoor1, greenDoor2, blueDoor1, blueDoor2, redDoor1, redDoor2, Player, endDoor1, endDoor2, specialEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -122,6 +122,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
     {
         isRedActive = true;
         isGreenActive = false;
+        specialEvent.SetActive(true);
     }
 
 }

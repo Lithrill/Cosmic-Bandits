@@ -9,13 +9,19 @@ public class DoorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        door1.SetActive(false);
-        door2.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            door1.SetActive(false);
+            door2.SetActive(false);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        door1.SetActive(true);
-        door2.SetActive(true);
+        if (other.CompareTag("Player"))
+        {
+            door1.SetActive(true);
+            door2.SetActive(true);
+        }
     }
    
 }
