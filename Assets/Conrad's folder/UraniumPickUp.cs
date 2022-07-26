@@ -12,6 +12,8 @@ public class UraniumPickUp : MonoBehaviour
     public int uraniumNumberCounter;
     public GameObject upgradeCanvas;
     public GameObject ammoCanvas;
+    public GameObject automaticFireObj;
+    public GameObject purcahseCanvas1, purchaseCanvas2, textBasedCanvas;
     Coroutine ammoRoutine = null;
 
     Coroutine lastRoutine = null;
@@ -64,7 +66,10 @@ public class UraniumPickUp : MonoBehaviour
             uraniumNumberCounter -= 3;
             uraniumCounter.text = "Uranium" + ": " + uraniumNumberCounter.ToString("00");
 
-            EventManager.OnAutomaticGunEvent?.Invoke();
+            purcahseCanvas1.SetActive(false);
+            purchaseCanvas2.SetActive(false);
+            textBasedCanvas.SetActive(true);
+            automaticFireObj.SetActive(true);
             uraniumShower = StartCoroutine(ShowingUranium());
             upgradeCanvas.SetActive(false);
         }

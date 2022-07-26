@@ -83,6 +83,7 @@
     <Compile Include="Assets\Conrad&apos;s folder\LookAtTargetScript.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\DoorOverideEvent.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\SecondAIScript.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\PlayButton.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\EnemyScript.cs" />
@@ -92,13 +93,17 @@
     <Compile Include="Assets\Conrad&apos;s folder\EventManager.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\CameraShake.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\AdvancedKeyCardScript.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\OnTitleScreenStart.cs" />
     <Compile Include="Assets\Domara&apos;s folder\Scripts\KeyCardPickup.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\GunSystem.cs" />
     <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\UraniumCounterTrigger.cs" />
-    <Compile Include="Assets\Conrad&apos;s folder\SecondAIScript.cs" />
-    <Compile Include="Assets\Conrad&apos;s folder\AdvancedKeyCardScript.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\ProjectorForKeyCard.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\GunExtraScript.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\AutomaticFireChanger.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\ParticleRemover.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\SpecialEventScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

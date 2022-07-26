@@ -30,6 +30,8 @@ public class EventManager : MonoBehaviour
 
     public delegate void BlueKeyCard();
 
+    public delegate void SingleFireGun();
+
     //
 
     public static UraniumPickUp OnUraniumPickUpEvent;
@@ -57,4 +59,6 @@ public class EventManager : MonoBehaviour
     public static BlueKeyCard OnBlueKeyCardEvent;
 
     public static RedKeyCard OnRedKeyCardEvent;
+
+    public static SingleFireGun OnSingleFireEvent;
 }

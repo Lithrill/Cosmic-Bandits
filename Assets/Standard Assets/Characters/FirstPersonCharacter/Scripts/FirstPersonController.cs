@@ -83,14 +83,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                m_UseHeadBob = true;
-            }
-            else
-            {
-                m_UseHeadBob = false;
-            }
+            //if (Input.GetKey(KeyCode.LeftShift))
+            //{
+            //    m_UseHeadBob = true;
+            //}
+            //else
+            //{
+            //    m_UseHeadBob = false;
+            //}
         }
 
 

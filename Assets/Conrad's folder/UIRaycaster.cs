@@ -22,7 +22,7 @@ public class UIRaycaster : MonoBehaviour
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit;
 
-        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
+        if (Input.GetKeyDown(KeyCode.F) && Physics.Raycast(ray, out hit))
         {
             print("I'm looking at " + hit.transform.name);
             if (hit.transform.tag == "AutomaticFireUpgrade")
@@ -38,6 +38,10 @@ public class UIRaycaster : MonoBehaviour
                 //Debug.Log("DoorOveride");
                 EventManager.OnDoorOverideEvent?.Invoke();
             }
+
+        }
+        else if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit))
+        {
             if (hit.transform.tag == "PLAY")
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

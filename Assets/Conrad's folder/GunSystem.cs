@@ -19,10 +19,10 @@ public class GunSystem : MonoBehaviour
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
 
-    public GameObject muzzleFlash, bulletHoleGraphic;
+    public GameObject muzzleFlash, bulletHoleGraphic, specialAudio;
     //public CameraShake camShake;
     //public float camShakeMagnitude, camShakeDuration;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI text, totalAmmoAvaliabletext;
 
     
 
@@ -38,7 +38,8 @@ public class GunSystem : MonoBehaviour
     {
         MyInput();
 
-        text.SetText("AMMO " + bulletsLeft + " / " + totalAmmo);
+        text.SetText("AMMO " + bulletsLeft + " / " + magazineSize);
+        totalAmmoAvaliabletext.SetText("RESERVE " + " / " + totalAmmo);
     }
 
     private void MyInput()
@@ -115,6 +116,14 @@ public class GunSystem : MonoBehaviour
 
             }
         }
+        if (allowButtonHold)
+        {
+            specialAudio.SetActive(true);
+        }
+        else if (allowButtonHold == false)
+        {
+            specialAudio.SetActive(false);
+        }
 
         //ShakeCamera
         //camShake.Shake(camShakeDuration, camShakeMagnitude);
@@ -141,17 +150,24 @@ public class GunSystem : MonoBehaviour
     {
         EventManager.OnAutomaticGunEvent += AutomaticGunFireChanger;
         EventManager.OnAmmoEvent += AmmoIncreaser;
+        EventManager.OnSingleFireEvent += SingleFireChanger;
     }
 
     private void OnDisable()
     {
         EventManager.OnAutomaticGunEvent -= AutomaticGunFireChanger;
         EventManager.OnAmmoEvent -= AmmoIncreaser;
+        EventManager.OnSingleFireEvent -= SingleFireChanger;
     }
 
     public void AutomaticGunFireChanger()
     {
         allowButtonHold = true;
+    }
+
+    public void SingleFireChanger()
+    {
+        allowButtonHold = false;
     }
 
     public void AmmoIncreaser()
