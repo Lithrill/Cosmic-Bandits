@@ -24,6 +24,12 @@ public class EventManager : MonoBehaviour
 
     public delegate void IncreaseLevel();
 
+    public delegate void GreenKeyCard();
+
+    public delegate void RedKeyCard();
+
+    public delegate void BlueKeyCard();
+
     //
 
     public static UraniumPickUp OnUraniumPickUpEvent;
@@ -45,4 +51,10 @@ public class EventManager : MonoBehaviour
     public static LevelOneKeyCard OnLevelOneKeyCardEvent;
 
     public static IncreaseLevel OnIncreaseLevelEvent;
+
+    public static GreenKeyCard OnGreenKeyCardEvent;
+
+    public static BlueKeyCard OnBlueKeyCardEvent;
+
+    public static RedKeyCard OnRedKeyCardEvent;
 }

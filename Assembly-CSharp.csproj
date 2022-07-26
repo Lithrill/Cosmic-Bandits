@@ -65,6 +65,7 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\UIRaycaster.cs" />
     <Compile Include="Assets\Domara&apos;s folder\Scripts\RotateSky.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\SpecialRoomDoorScript.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\NPCMove.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\DoorOverideCode.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\TeleporterScript.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\Sound.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\VecinityDetector.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\GunEquipingScript.cs" />
@@ -95,7 +97,8 @@
     <Compile Include="Assets\Conrad&apos;s folder\GunSystem.cs" />
     <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\Conrad&apos;s folder\UraniumCounterTrigger.cs" />
-    <Compile Include="Assets\Conrad&apos;s folder\SpecialRoomDoorScript.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\SecondAIScript.cs" />
+    <Compile Include="Assets\Conrad&apos;s folder\AdvancedKeyCardScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

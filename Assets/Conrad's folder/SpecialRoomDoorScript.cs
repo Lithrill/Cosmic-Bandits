@@ -98,11 +98,15 @@ public class SpecialRoomDoorScript : MonoBehaviour
     }
     public void OnEnable()
     {
-        
+        EventManager.OnGreenKeyCardEvent += GreenKeyCard;
+        EventManager.OnRedKeyCardEvent += RedKeyCard;
+        EventManager.OnBlueKeyCardEvent += BlueKeyCard;
     }
     public void OnDisable()
-    { 
-        
+    {
+        EventManager.OnGreenKeyCardEvent -= GreenKeyCard;
+        EventManager.OnRedKeyCardEvent -= RedKeyCard;
+        EventManager.OnBlueKeyCardEvent -= BlueKeyCard;
     }
     public void GreenKeyCard()
     { 
