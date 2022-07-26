@@ -19,5 +19,6 @@ public class DoorOverideEvent : MonoBehaviour
         Debug.Log("DoorIsActivated");
         doorReactivated1.SetActive(true);
         doorReactivated2.SetActive(true);
+        
     }
 }

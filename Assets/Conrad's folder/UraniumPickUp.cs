@@ -14,6 +14,9 @@ public class UraniumPickUp : MonoBehaviour
     public GameObject ammoCanvas;
     public GameObject automaticFireObj;
     public GameObject purcahseCanvas1, purchaseCanvas2, textBasedCanvas;
+    public GameObject gameWinCanvas, player, Mycamera;
+
+    public bool level2 = false;
     Coroutine ammoRoutine = null;
 
     Coroutine lastRoutine = null;
@@ -23,6 +26,16 @@ public class UraniumPickUp : MonoBehaviour
     private void Start()
     {
         uraniumCounter.GetComponent<TMP_Text>().color = Color.green;
+        if (level2)
+        {
+            uraniumNumberCounter++;
+            uraniumNumberCounter++;
+            uraniumNumberCounter++;
+            uraniumNumberCounter++;
+            uraniumNumberCounter++;
+            uraniumNumberCounter++;
+            uraniumCounter.text = "Uranium" + ":" + uraniumNumberCounter.ToString("00");
+        }
     }
 
     private void UraniumCoroutine()
@@ -39,7 +52,7 @@ public class UraniumPickUp : MonoBehaviour
         uraniumNumberCounter++;
         uraniumCounter.text = "Uranium" + ":" + uraniumNumberCounter.ToString("00");
         yield return new WaitForSeconds(5);
-        uIuraniumcounter.SetActive(false);
+        //uIuraniumcounter.SetActive(false);
         
 
         StopCoroutine(lastRoutine);
@@ -50,6 +63,7 @@ public class UraniumPickUp : MonoBehaviour
         EventManager.OnUraniumPickUpEvent += UraniumCoroutine;
         EventManager.OnAutomaticFireUpgradeEvent += AutomaticFireUpgradeCost;
         EventManager.OnAmmoEvent += BuyAmmo;
+        EventManager.OnpurchaseEndingEvent += BuyEnding;
     }
 
     private void OnDisable()
@@ -57,6 +71,7 @@ public class UraniumPickUp : MonoBehaviour
         EventManager.OnUraniumPickUpEvent -= UraniumCoroutine;
         EventManager.OnAutomaticFireUpgradeEvent -= AutomaticFireUpgradeCost;
         EventManager.OnAmmoEvent -= BuyAmmo;
+        EventManager.OnpurchaseEndingEvent -= BuyEnding;
     }
 
     public void AutomaticFireUpgradeCost()
@@ -70,7 +85,7 @@ public class UraniumPickUp : MonoBehaviour
             purchaseCanvas2.SetActive(false);
             textBasedCanvas.SetActive(true);
             automaticFireObj.SetActive(true);
-            uraniumShower = StartCoroutine(ShowingUranium());
+            //uraniumShower = StartCoroutine(ShowingUranium());
             upgradeCanvas.SetActive(false);
         }
     }
@@ -87,6 +102,20 @@ public class UraniumPickUp : MonoBehaviour
         }
     }
 
+    public void BuyEnding()
+    {
+        if (uraniumNumberCounter >= 6)
+        {
+            uraniumNumberCounter -= 6;
+            uraniumCounter.text = "Uranium" + ":" + uraniumNumberCounter.ToString("00");
+
+            gameWinCanvas.SetActive(true);
+            player.SetActive(false);
+            Mycamera.SetActive(true);
+            
+        }
+    }
+
     IEnumerator AmmoRoutine()
     {
         ammoCanvas.SetActive(false);
@@ -100,7 +129,7 @@ public class UraniumPickUp : MonoBehaviour
         uIuraniumcounter.SetActive(true);
         uraniumCounter.text = "Uranium" + ":" + uraniumNumberCounter.ToString("00");
         yield return new WaitForSeconds(5);
-        uIuraniumcounter.SetActive(false);
+        //uIuraniumcounter.SetActive(false);
 
         StopCoroutine(ShowingUranium());
     }

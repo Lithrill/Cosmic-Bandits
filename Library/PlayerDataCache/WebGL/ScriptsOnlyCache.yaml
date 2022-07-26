@@ -3,21 +3,33 @@ ScriptsOnlyBuild:
     Assembly-CSharp-firstpass.dll:
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     Assembly-CSharp.dll:
+    - AdvancedKeyCardScript
     - AudioManager
+    - AutomaticFireChanger
     - CameraShake
     - DoorOverideCode
     - DoorOverideEvent
     - DoorTrigger
+    - EYProjectileScript
     - EnemyScript
+    - GunBreakingScript
     - GunEquipingScript
+    - GunExtraScript
     - GunSystem
     - KeyCardPickup
     - KeyCardToDoor
     - LookAtTargetScript
     - NPCMove
     - OnTitleScreenStart
+    - ParticleRemover
     - PlayButton
+    - ProjectorForKeyCard
+    - ReturnToMainMenu
     - RotateSky
+    - SecondAIScript
+    - SpecialEventScript
+    - SpecialRoomDoorScript
+    - TeleporterScript
     - UIRaycaster
     - UraniumCounterTrigger
     - UraniumPickUp
@@ -97,6 +109,15 @@ ScriptsOnlyBuild:
     fullTypeName: PlayButton
     methodName: PlayGame
   - assembly: Assembly-CSharp
+    fullTypeName: ReturnToMainMenu
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: ReturnToMainMenu
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: UraniumPickUp
+    methodName: BuyAmmo
+  - assembly: Assembly-CSharp
     fullTypeName: UraniumPickUp
     methodName: AutomaticFireUpgradeCost
   - assembly: Assembly-CSharp
@@ -105,7 +126,148 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UraniumPickUp
     methodName: BuyAmmo
+  - assembly: Assembly-CSharp
+    fullTypeName: ReturnToMainMenu
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: ReturnToMainMenu
+    methodName: MainMenu
   sceneClasses:
+    Assets/Conrad's folder/Level2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1646}
+    - Class: 114
+      Script: {instanceID: 1652}
+    - Class: 114
+      Script: {instanceID: 1670}
+    - Class: 114
+      Script: {instanceID: 2810}
+    - Class: 114
+      Script: {instanceID: 2866}
+    - Class: 114
+      Script: {instanceID: 3102}
+    - Class: 114
+      Script: {instanceID: 3212}
+    - Class: 114
+      Script: {instanceID: 3226}
+    - Class: 114
+      Script: {instanceID: 3416}
+    - Class: 114
+      Script: {instanceID: 3424}
+    - Class: 114
+      Script: {instanceID: 3584}
+    - Class: 114
+      Script: {instanceID: 3638}
+    - Class: 114
+      Script: {instanceID: 3838}
+    - Class: 114
+      Script: {instanceID: 4128}
+    - Class: 114
+      Script: {instanceID: 4408}
+    - Class: 114
+      Script: {instanceID: 4720}
+    - Class: 114
+      Script: {instanceID: 4762}
+    - Class: 114
+      Script: {instanceID: 5196}
+    - Class: 114
+      Script: {instanceID: 5520}
+    - Class: 114
+      Script: {instanceID: 5536}
+    - Class: 114
+      Script: {instanceID: 5676}
+    - Class: 114
+      Script: {instanceID: 6306}
+    - Class: 114
+      Script: {instanceID: 6388}
+    - Class: 114
+      Script: {instanceID: 6468}
+    - Class: 114
+      Script: {instanceID: 7178}
+    - Class: 114
+      Script: {instanceID: 7388}
+    - Class: 114
+      Script: {instanceID: 7780}
+    - Class: 114
+      Script: {instanceID: 8156}
+    - Class: 114
+      Script: {instanceID: 8854}
+    - Class: 114
+      Script: {instanceID: 1996778}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 124
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
+    - Class: 143
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
+      Script: {instanceID: 0}
     Assets/Domara's folder/Scenes/Title Screen.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -146,39 +308,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1644}
+      Script: {instanceID: 1646}
     - Class: 114
-      Script: {instanceID: 1650}
+      Script: {instanceID: 1652}
     - Class: 114
-      Script: {instanceID: 2396}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 3130}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3416}
     - Class: 114
-      Script: {instanceID: 3608}
+      Script: {instanceID: 3584}
     - Class: 114
-      Script: {instanceID: 4148}
+      Script: {instanceID: 4128}
     - Class: 114
-      Script: {instanceID: 4494}
+      Script: {instanceID: 4476}
     - Class: 114
-      Script: {instanceID: 4612}
+      Script: {instanceID: 4594}
     - Class: 114
-      Script: {instanceID: 4890}
+      Script: {instanceID: 4876}
     - Class: 114
-      Script: {instanceID: 5690}
+      Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 6320}
+      Script: {instanceID: 6306}
     - Class: 114
-      Script: {instanceID: 6480}
+      Script: {instanceID: 6468}
     - Class: 114
-      Script: {instanceID: 6568}
+      Script: {instanceID: 6556}
     - Class: 114
-      Script: {instanceID: 8082}
+      Script: {instanceID: 8072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -247,57 +409,83 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1644}
+      Script: {instanceID: 1646}
     - Class: 114
-      Script: {instanceID: 1650}
+      Script: {instanceID: 1652}
     - Class: 114
-      Script: {instanceID: 1700}
+      Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 1734}
+      Script: {instanceID: 1706}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 3130}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3226}
     - Class: 114
-      Script: {instanceID: 4024}
+      Script: {instanceID: 3416}
     - Class: 114
-      Script: {instanceID: 4148}
+      Script: {instanceID: 3424}
     - Class: 114
-      Script: {instanceID: 4330}
+      Script: {instanceID: 3584}
     - Class: 114
-      Script: {instanceID: 5134}
+      Script: {instanceID: 3638}
     - Class: 114
-      Script: {instanceID: 5210}
+      Script: {instanceID: 3838}
     - Class: 114
-      Script: {instanceID: 5534}
+      Script: {instanceID: 4004}
     - Class: 114
-      Script: {instanceID: 5550}
+      Script: {instanceID: 4128}
     - Class: 114
-      Script: {instanceID: 5690}
+      Script: {instanceID: 4310}
     - Class: 114
-      Script: {instanceID: 5700}
+      Script: {instanceID: 4408}
     - Class: 114
-      Script: {instanceID: 6320}
+      Script: {instanceID: 4720}
     - Class: 114
-      Script: {instanceID: 6480}
+      Script: {instanceID: 4762}
     - Class: 114
-      Script: {instanceID: 6648}
+      Script: {instanceID: 5120}
     - Class: 114
-      Script: {instanceID: 7190}
+      Script: {instanceID: 5196}
     - Class: 114
-      Script: {instanceID: 7400}
+      Script: {instanceID: 5520}
     - Class: 114
-      Script: {instanceID: 8084}
+      Script: {instanceID: 5536}
     - Class: 114
-      Script: {instanceID: 8166}
+      Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 8860}
+      Script: {instanceID: 5686}
+    - Class: 114
+      Script: {instanceID: 6306}
+    - Class: 114
+      Script: {instanceID: 6388}
+    - Class: 114
+      Script: {instanceID: 6468}
+    - Class: 114
+      Script: {instanceID: 6636}
+    - Class: 114
+      Script: {instanceID: 7178}
+    - Class: 114
+      Script: {instanceID: 7388}
+    - Class: 114
+      Script: {instanceID: 7780}
+    - Class: 114
+      Script: {instanceID: 8074}
+    - Class: 114
+      Script: {instanceID: 8156}
+    - Class: 114
+      Script: {instanceID: 8854}
+    - Class: 114
+      Script: {instanceID: 1996778}
+    - Class: 114
+      Script: {instanceID: 2000586}
+    - Class: 114
+      Script: {instanceID: 3226094}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -363,7 +551,7 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 274ac096d360803a8b32f0d0f1e7469f
+      Hash: 333e61836330dc841eb75371d125210c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UraniumPickUp
@@ -729,10 +917,16 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 218048bd93e908746781901d78cf0f9b
+      Hash: 19c20fa92575b9d7bb466166334f3510
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParticleRemover
   - hash:
       serializedVersion: 2
       Hash: 323ef9904ec6149348cdcc45975c0dbe
@@ -763,6 +957,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: c21df2adcfee1f2fc4b8b728a08fdf1c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GunExtraScript
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -831,6 +1031,12 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
+      Hash: 3a446c8c4c53daec2d4bee822a2ddf19
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpecialRoomDoorScript
+  - hash:
+      serializedVersion: 2
       Hash: 39a1af780851540205de944aa74817a6
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Car
@@ -873,6 +1079,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 572356a1eda64a965648eec88f0ad946
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ProjectorForKeyCard
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -903,7 +1115,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 59a5d53df0a899c63518bae3b69b437d
+      Hash: a6b3c1603ef03a692182769dfe114ad9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPCMove
@@ -999,6 +1211,12 @@ ScriptsOnlyBuild:
     className: SimpleCameraController
   - hash:
       serializedVersion: 2
+      Hash: 8260c7a9cdaa27de763e34956ff3ebc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TeleporterScript
+  - hash:
+      serializedVersion: 2
       Hash: a4d879eed97e8d86fd752672fc026fa2
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
@@ -1063,6 +1281,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: DictionaryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 529e5ea92baa0c04bddf39fa444b19c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AutomaticFireChanger
+  - hash:
+      serializedVersion: 2
+      Hash: b8576cfd0385451db1d9b4a9e275dc3c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpecialEventScript
   - hash:
       serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
@@ -1351,6 +1581,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: AnimatorMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7b64f7347847177c1adb95b992f85972
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SecondAIScript
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -1683,6 +1919,12 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
+      Hash: e37728bdb2a52a3b771988dfd9ff0502
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AdvancedKeyCardScript
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1749,7 +1991,7 @@ ScriptsOnlyBuild:
     className: Restarter
   - hash:
       serializedVersion: 2
-      Hash: 75ad201139c2829e4bf5375f7e3f1c11
+      Hash: 83db4cf0e2f731dcfc880d9e67778795
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GunSystem
@@ -1927,8 +2169,27 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReturnToMainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: d95d908aea0f0f49192a7c12783c67f2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EYProjectileScript
+  - hash:
+      serializedVersion: 2
+      Hash: d1887094fbfbdddbfceac1b55a20efb5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GunBreakingScript
   platform: 20
   scenePathNames:
   - Assets/Domara's folder/Scenes/Title Screen.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Conra/Desktop/SecondLastBuild
+  - Assets/Conrad's folder/Level2.unity
+  playerPath: C:/Users/Conra/Desktop/COSMICBANDITSFINALBUILD

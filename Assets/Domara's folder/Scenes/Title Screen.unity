@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.042364806, g: 0.043160386, b: 0.05785269, a: 1}
+  m_IndirectSpecularColor: {r: 0.040779326, g: 0.04152663, b: 0.055646032, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1948,6 +1948,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19930300, guid: 5f8552cfeac0c29428f4d3d1362bacae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19953252, guid: 5f8552cfeac0c29428f4d3d1362bacae, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f8552cfeac0c29428f4d3d1362bacae, type: 3}
 --- !u!1001 &834978649
@@ -2335,6 +2343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457798bc866222b4490c98915f2c0dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1: {fileID: 0}
+  level2: {fileID: 0}
+  player: {fileID: 0}
+  gun: {fileID: 0}
+  level2SpawnPosition: {fileID: 0}
   cam: {fileID: 1090157301}
 --- !u!114 &1090157304
 MonoBehaviour:
@@ -2857,15 +2870,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - clip: {fileID: 8300000, guid: c70c550091f22bf4f8f546d33fc093e8, type: 3}
+  - clip: {fileID: 8300000, guid: af184d39ffee8004e950aa7cbef59c14, type: 3}
     volume: 1
     pitch: 1
     name: ProjectorSoundWorking
     source: {fileID: 0}
-  - clip: {fileID: 8300000, guid: 30ff4eac11a097b4490eb10dcf61ece4, type: 3}
+  - clip: {fileID: 8300000, guid: 6fb39f1fbb413f54682690fe908c8000, type: 3}
     volume: 1
     pitch: 1
     name: AmbientSound2
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 8f84d5cfb09365341aca610fb64bdf68, type: 3}
+    volume: 1
+    pitch: 1
+    name: Space_Station_Ambience
     source: {fileID: 0}
 --- !u!4 &1216558221
 Transform:

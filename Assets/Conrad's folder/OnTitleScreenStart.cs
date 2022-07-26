@@ -8,7 +8,7 @@ public class OnTitleScreenStart : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("ProjectorSoundWorking");
-        FindObjectOfType<AudioManager>().Play("AmbientSound2");
+        FindObjectOfType<AudioManager>().Play("Space_Station_Ambience");
     }
 
     // Update is called once per frame

@@ -7,11 +7,20 @@ public class SecondAIScript : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public GameObject ThePlayerObject;
+    public GameObject ThePlayerObject, TheEnemy;
+
+    public GameObject playerSound;
 
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
+
+    public GameObject gameOverCanvas;
+
+    public bool isRoutineRunning = false;
+
+    Coroutine lastRoutine = null;
+
 
     //Patroling
     public Vector3 walkPoint;
@@ -33,6 +42,7 @@ public class SecondAIScript : MonoBehaviour
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        
 
         if (!playerInSightRange && !playerInAttackRange)
         {
@@ -42,6 +52,33 @@ public class SecondAIScript : MonoBehaviour
         {
             ChasePlayer();
         }
+        if (playerInAttackRange && playerInSightRange)
+        {
+            AttackPlayer();
+        }
+
+        if (Vector3.Distance(TheEnemy.transform.position, playerSound.transform.position) <= 17)
+        {
+
+            if (isRoutineRunning == false)
+            {
+                Debug.Log("SoundPlayed");
+                FindObjectOfType<AudioManager>().Play("Monster_Scream");
+                //FindObjectOfType<AudioManager>().Play("GunShot");
+                lastRoutine = StartCoroutine(SpecialSound());
+                isRoutineRunning = true;
+            }
+            
+        }
+    }
+
+    IEnumerator SpecialSound()
+    {
+        Debug.Log("ST");
+        yield return new WaitForSeconds(15);
+        Debug.Log("ED");
+        isRoutineRunning = false;
+        StopCoroutine(lastRoutine);
     }
 
     private void SearchWalkPoint()
@@ -60,6 +97,7 @@ public class SecondAIScript : MonoBehaviour
 
     private void Patroling()
     {
+        //FindObjectOfType<AudioManager>().Play("Monster_Scream");
         if (!walkPointSet)
         {
             SearchWalkPoint();
@@ -81,6 +119,16 @@ public class SecondAIScript : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        //FindObjectOfType<AudioManager>().Play("Monster_Scream");
+    }
+
+    private void AttackPlayer()
+    {
+        //Make sure enemy doesn't move
+        agent.SetDestination(player.position);
+
+        transform.LookAt(player);
+        //FindObjectOfType<AudioManager>().Play("Monster_Scream");
     }
 
     private void OnDrawGizmosSelected()
@@ -95,7 +143,8 @@ public class SecondAIScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(ThePlayerObject);
+            Time.timeScale = 0f;
+            gameOverCanvas.SetActive(true);
         }
     }
 

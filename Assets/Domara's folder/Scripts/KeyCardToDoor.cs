@@ -23,6 +23,7 @@ public class KeyCardToDoor : MonoBehaviour
         if (doorActive)
         {
             door.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("Space_Door");
         }
     }
     private void OnTriggerExit(Collider other)
@@ -31,6 +32,7 @@ public class KeyCardToDoor : MonoBehaviour
         if (doorActive)
         {
             door.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Space_Door");
         }
     }
     public void keyCardIsPickedUp()

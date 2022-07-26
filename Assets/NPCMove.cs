@@ -9,6 +9,8 @@ public class NPCMove : MonoBehaviour
 
     public Transform player;
 
+    public GameObject gameOverCanvas;
+
     public LayerMask whatIsGround, whatIsPlayer;
 
     public GameObject projectile;
@@ -72,6 +74,7 @@ public class NPCMove : MonoBehaviour
 
     private void Patroling()
     {
+        //FindObjectOfType<AudioManager>().Play("Monster_Scream");
         if (!walkPointSet)
         {
             SearchWalkPoint();
@@ -93,23 +96,37 @@ public class NPCMove : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+        //FindObjectOfType<AudioManager>().Play("Monster_Scream");
+
     }
     private void AttackPlayer()
     {
         //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
+        agent.SetDestination(player.position);
+        //FindObjectOfType<AudioManager>().Play("Monster_Scream");
 
         transform.LookAt(player);
         if (!alreadyAttacked)
         {
-            //Attack code here
-            Rigidbody rb = Instantiate(projectile, fireLocation.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            ////Attack code here
+            //Rigidbody rb = Instantiate(projectile, fireLocation.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            ////rb.AddForce(transform.up * 8f, ForceMode.Impulse);
 
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            //alreadyAttacked = true;
+            //Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("triggerEntered");
+        if(other.CompareTag("Player"))
+        {
+            Debug.Log("player found");
+            gameOverCanvas.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 

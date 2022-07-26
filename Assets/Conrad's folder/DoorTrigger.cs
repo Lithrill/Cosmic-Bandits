@@ -13,6 +13,7 @@ public class DoorTrigger : MonoBehaviour
         {
             door1.SetActive(false);
             door2.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("Space_Door");
         }
     }
     private void OnTriggerExit(Collider other)
@@ -21,6 +22,7 @@ public class DoorTrigger : MonoBehaviour
         {
             door1.SetActive(true);
             door2.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Space_Door");
         }
     }
    

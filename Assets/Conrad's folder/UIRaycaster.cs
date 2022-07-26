@@ -27,22 +27,29 @@ public class UIRaycaster : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && Physics.Raycast(ray, out hit))
         {
             print("I'm looking at " + hit.transform.name);
-            if (hit.transform.tag == "AutomaticFireUpgrade")
-            {
-                EventManager.OnAutomaticFireUpgradeEvent?.Invoke();
-            }
-            if (hit.transform.tag == "Ammunition")
-            {
-                EventManager.OnAmmoEvent?.Invoke();
-            }
+            //if (hit.transform.tag == "AutomaticFireUpgrade")
+            //{
+            //    EventManager.OnAutomaticFireUpgradeEvent?.Invoke();
+            //}
+            //if (hit.transform.tag == "Ammunition")
+            //{
+            //    EventManager.OnAmmoEvent?.Invoke();
+            //}
             if (hit.transform.tag == "DoorOveride")
             {
                 //Debug.Log("DoorOveride");
                 EventManager.OnDoorOverideEvent?.Invoke();
+                FindObjectOfType<AudioManager>().Play("Space_Button");
             }
             if (hit.transform.tag == "NextLevel")
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                FindObjectOfType<AudioManager>().Play("Space_Button");
+            }
+            if (hit.transform.tag == "Ending")
+            {
+                EventManager.OnpurchaseEndingEvent?.Invoke();
+                FindObjectOfType<AudioManager>().Play("Space_Button");
             }
 
         }
@@ -50,8 +57,16 @@ public class UIRaycaster : MonoBehaviour
         {
             if (hit.transform.tag == "PLAY")
             {
+                FindObjectOfType<AudioManager>().Play("Space_Button");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 EventManager.OnIncreaseLevelEvent?.Invoke();
+            }
+            if (hit.transform.tag == "MainMenu")
+            {
+                FindObjectOfType<AudioManager>().Play("Space_Button");
+                Time.timeScale = 1f;
+                SceneManager.LoadScene("Title Screen");
+                Time.timeScale = 1f;
             }
         }
         else

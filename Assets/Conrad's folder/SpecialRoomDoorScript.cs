@@ -15,7 +15,10 @@ public class SpecialRoomDoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isRedActive)
+        {
+            SpecialEvent();
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -25,6 +28,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
             {
                 blueDoor1.SetActive(false);
                 blueDoor2.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
             else if (isBlueActive)
             {
@@ -32,6 +36,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
                 blueDoor2.SetActive(false);
                 greenDoor1.SetActive(false);
                 greenDoor2.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
 
             }
             else if (isGreenActive)
@@ -42,6 +47,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
                 greenDoor2.SetActive(false);
                 redDoor1.SetActive(false);
                 redDoor2.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
             else if (isRedActive)
             {
@@ -53,6 +59,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
                 redDoor2.SetActive(false);
                 endDoor1.SetActive(false);
                 endDoor2.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
             
         }
@@ -65,6 +72,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
             {
                 blueDoor1.SetActive(true);
                 blueDoor2.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
             else if (isBlueActive)
             {
@@ -72,6 +80,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
                 blueDoor2.SetActive(true);
                 greenDoor1.SetActive(true);
                 greenDoor2.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
             else if (isGreenActive)
             {
@@ -81,6 +90,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
                 greenDoor2.SetActive(true);
                 redDoor1.SetActive(true);
                 redDoor2.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
             else if (isRedActive)
             {
@@ -92,6 +102,7 @@ public class SpecialRoomDoorScript : MonoBehaviour
                 redDoor2.SetActive(true);
                 endDoor1.SetActive(true);
                 endDoor2.SetActive(true);
+                FindObjectOfType<AudioManager>().Play("Space_Door");
             }
         }
 
@@ -122,7 +133,10 @@ public class SpecialRoomDoorScript : MonoBehaviour
     {
         isRedActive = true;
         isGreenActive = false;
+        
+    }
+    public void SpecialEvent()
+    {
         specialEvent.SetActive(true);
     }
-
 }

@@ -32,6 +32,8 @@ public class EventManager : MonoBehaviour
 
     public delegate void SingleFireGun();
 
+    public delegate void PurchaseEnding();
+
     //
 
     public static UraniumPickUp OnUraniumPickUpEvent;
@@ -61,4 +63,6 @@ public class EventManager : MonoBehaviour
     public static RedKeyCard OnRedKeyCardEvent;
 
     public static SingleFireGun OnSingleFireEvent;
+
+    public static PurchaseEnding OnpurchaseEndingEvent;
 }

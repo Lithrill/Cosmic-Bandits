@@ -8086,24 +8086,6 @@ IL_008f:
 		bool L_15;
 		L_15 = CharacterController_get_isGrounded_m548072EC190878925C0F97595B6C307714EFDD67(L_14, NULL);
 		__this->___m_PreviouslyGrounded_28 = L_15;
-		// if (Input.GetKey(KeyCode.LeftShift))
-		bool L_16;
-		L_16 = Input_GetKey_m0BF0499CADC378F02B6BEE2399FB945AB929B81A(((int32_t)304), NULL);
-		if (!L_16)
-		{
-			goto IL_00b4;
-		}
-	}
-	{
-		// m_UseHeadBob = true;
-		__this->___m_UseHeadBob_14 = (bool)1;
-		return;
-	}
-
-IL_00b4:
-	{
-		// m_UseHeadBob = false;
-		__this->___m_UseHeadBob_14 = (bool)0;
 		// }
 		return;
 	}

@@ -30,7 +30,7 @@ public class EnemyScript : MonoBehaviour
         {
             Instantiate(uranium, spawnPosition.transform.position, Quaternion.identity);
             FindObjectOfType<AudioManager>().Play("DamageSound");
-            soldier.SetActive(false);
+            Destroy(soldier);
         }
     }
 }

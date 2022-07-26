@@ -19,6 +19,8 @@ TagManager:
   - Enemy 9
   - PLAY
   - NextLevel
+  - Ending
+  - MainMenu
   layers:
   - Default
   - TransparentFX

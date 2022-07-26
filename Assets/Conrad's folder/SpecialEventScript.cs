@@ -15,7 +15,7 @@ public class SpecialEventScript : MonoBehaviour
         door4.SetActive(true);
         door5.SetActive(false);
         door6.SetActive(false);
-
+        FindObjectOfType<AudioManager>().Play("Space_Door");
     }
     
 
